@@ -4,17 +4,17 @@ cask "reclaim" do
 
   url "https://github.com/ikraamg/reclaim/releases/download/v#{version}/Reclaim-#{version}.zip"
   name "Reclaim"
-  desc "Finds and kills wasted local processes on a Mac, and reports what eats disk and what starts at login"
+  desc "Finds and kills wasted local processes, reports what eats disk and starts at login"
   homepage "https://github.com/ikraamg/reclaim"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Reclaim.app"
 
   uninstall quit: "com.ikraam.Reclaim"
 
   zap trash: [
-    "~/Library/Application Support/Reclaim",
     "~/.local/bin/reclaim",
+    "~/Library/Application Support/Reclaim",
   ]
 end
