@@ -4,7 +4,7 @@ cask "reclaim" do
 
   url "https://github.com/ikraamg/reclaim/releases/download/v#{version}/Reclaim-#{version}.zip"
   name "Reclaim"
-  desc "Finds and kills wasted local processes, reports what eats disk and starts at login"
+  desc "Kills wasted local processes, reports what eats disk and what starts at login"
   homepage "https://github.com/ikraamg/reclaim"
 
   depends_on macos: :sonoma
